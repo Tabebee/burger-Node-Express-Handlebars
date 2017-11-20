@@ -19,8 +19,17 @@ router.post("/api/burgers", function (req, res) {
             req.body.burger_name
         ],
         function (dat) {
-            res.
-        })
+            res.redirect("/");
+        });
+});
+
+router.put("/burger/:id", function (req, res) {
+    var condition = "id = " + req.params.id;
+    burger.update({
+        devoured: true
+    }, condition, function (dat) {
+        res.redirect("/");
+    });
 });
 
 

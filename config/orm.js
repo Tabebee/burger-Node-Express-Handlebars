@@ -37,7 +37,7 @@ var orm = {
     selectAll: function (tableInput, cb) {
         var queryThis = "SELECT * FROM " + tableInput + ";";
         connection.query(queryThis, function (err, result) {
-            if err throw err;
+            if (err) throw err;
             cb(result);
         });
     },
@@ -46,7 +46,7 @@ var orm = {
         queryThis += " (" +column.toString() + ")";
         queryThis += " VALUES (" + printQuestionMarks(values.length) + ") ";
         connection.query(queryThis, values, function (err, result) {
-            if err throw err;
+            if (err) throw err;
             cb(result);
         });
     },
@@ -54,7 +54,7 @@ var orm = {
         var queryThis = "UPDATE " + table + " SET ";
         queryThis += objToSql(objColVals) + " WHERE " + condition;
         connection.query(queryThis, function (err, result) {
-            if err throw err;
+            if (err) throw err;
             cb(result);
         });
     }

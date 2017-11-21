@@ -1,9 +1,9 @@
 var express = require("express");
 var router = express.Router();
-var burger = require("../models/burger,js");
+var burger = require("../models/burger.js");
 
 router.get("/", function (req, res) {
-    burger.selectAll(function (data) {
+    burger.all(function (data) {
         var jsonObject = { burger: data };
         console.log(jsonObject);
         res.render("index", jsonObject);
@@ -32,7 +32,7 @@ router.put("/burger/:id", function (req, res) {
     });
 });
 
-
+module.exports = router;
 
 
 

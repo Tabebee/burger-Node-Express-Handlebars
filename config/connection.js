@@ -3,25 +3,25 @@ var config = require("./config.js");
 var connection;
 
 //	If Heroku link
-// if (process.env.JAWSDB_URL){
-//     connection = mysql.createConnection(process.env.JAWSDB_URL);
-// } else {
-// //	else deploy Locally
-//     connection = mysql.createConnection({
-//         port: 3306,
-//         host: "localhost",
-//         user: config.user,
-//         password: config.password,
-//         database: "burgers_db"
-//     });
-// }
-connection = mysql.createConnection({
+if (process.env.JAWSDB_URL){
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+//	else deploy Locally
+    connection = mysql.createConnection({
         port: 3306,
         host: "localhost",
         user: config.user,
         password: config.password,
         database: "burgers_db"
     });
+}
+// connection = mysql.createConnection({
+//         port: 3306,
+//         host: "localhost",
+//         user: config.user,
+//         password: config.password,
+//         database: "burgers_db"
+//     });
 
 
 // Make connection.

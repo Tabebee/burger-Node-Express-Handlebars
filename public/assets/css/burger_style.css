@@ -1,0 +1,27 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-color: #eae237;
+}
+
+.burger-h1 {
+    font-family: 'UbuntuMono', monospace;
+    font-size: 40px;
+    color: #268bd2;
+}
+
+.burgerForm {
+    font-family: Waseem;
+    color: #ea6032;
+}
+
+.addMeButton {
+    background-color: #67ea12;
+    color: #ea230f;
+    width: 10%;
+}
+
+
+

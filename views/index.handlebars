@@ -8,10 +8,10 @@
 </div>
     <h3>Burgers Yet to be Eaten</h3>
     <div class="newBurgers">
-        {{#each burgers}}
-            {{#unless this.devoured}}
+        {{#each burger}}
+            {{#unless devoured}}
             <div id="eatMeList">
-                {{this.burger_name}}
+                {{burger_name}}
                 <button id="eatMe">Devour</button>
             </div>
             {{/unless}}
@@ -19,10 +19,10 @@
     </div>
     <h3>Burgers Allready Eaten</h3>
     <div class="devouredBurgers">
-        {{#each burgers}}
-            {{#if this.devoured}}
+        {{#each burger}}
+            {{#if devoured}}
             <div id="devoured">
-                {{this.burger_name}}
+                {{burger_name}}
                 <button id="deleteMe">Delete Burger</button>
                 <button id="moveMe">Re-order Burger</button>
             </div>

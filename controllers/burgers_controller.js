@@ -5,6 +5,7 @@ var burger = require("../models/burger.js");
 router.get("/", function (req, res) {
     burger.all(function (data) {
         var jsonObject = { burger: data };
+        console.log("router get burger all below");
         console.log(jsonObject);
         res.render("index", jsonObject);
     });

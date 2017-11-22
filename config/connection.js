@@ -1,8 +1,9 @@
 var mysql = require("mysql");
-var config = require("./config.js");
+// var config = require("./config.js");
 var connection;
 
 //	If Heroku link
+console.log(config);
 if (process.env.JAWSDB_URL){
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -10,8 +11,8 @@ if (process.env.JAWSDB_URL){
     connection = mysql.createConnection({
         port: 3306,
         host: "localhost",
-        user: config.user,
-        password: config.password,
+        user: "root",
+        password: "",
         database: "burgers_db"
     });
 }
